@@ -1,0 +1,22 @@
+<!--Наследование от base-->
+{% extends 'main/base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock  %}
+
+{% block content %}
+    <h1>Сайт</h1>
+    {% if tasks %}
+        {% for el in tasks %}
+            <div class="alert alert-warning mt-2">
+                <h3>{{el.title}}</h3>
+                <p>{{el.task}}</p>
+            </div>
+
+        {% endfor %}
+    {% else %}
+        <p>у нас нет записей</p>
+    {% endif  %}
+    <img src="/media/images/test_image1.png" class="img-thumbnail" width = '400' height="500">
+{% endblock %}

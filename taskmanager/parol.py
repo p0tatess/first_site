@@ -1,0 +1,1 @@
+your_secret_key ="django-insecure-!16y2vim$%kd@)#863gzi0dg&!8*hh54n4!dtx=#98+t$li80l"

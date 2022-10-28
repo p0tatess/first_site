@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href = "https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+                <img src="/media/images/y8Swz-BeGT0.jpg" alt="asd"
+               class="img-fluid" width="30" height="41">
+                <img src="/media/images/test_image2.png" class="img-fluid" width = '40' height="41">
+        <span class="fs-4">Test-site</span>
+      </a>
+
+      <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+        <a class="me-3 py-2 text-dark text-decoration-none" href="{% url 'home' %}">main</a>
+        <a class="me-3 py-2 text-dark text-decoration-none" href="{% url 'about' %}">about</a>
+          <a class="me-3 py-2 text-dark text-decoration-none" href="{% url 'create' %}">создать таск</a>
+
+      </nav>
+    </div>
+
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+
+
+</body>
+</html>
